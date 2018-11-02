@@ -59,6 +59,7 @@ class App
     @canvas = @setupCanvas()
     @canvasContext = @canvas.getContext "2d"
     @$finish = $ ".finish-button"
+    @$download = $ ".download-button"
 
     @$body = $ "body"
 
@@ -78,6 +79,7 @@ class App
     @$reference.on "click", @onClickReference
     @$finish.on "click", @onClickFinish
     @$nameTag.on "click", => @getName true
+    @$download.on "click", @onClickDownload
 
     @getName()
 
@@ -237,6 +239,17 @@ class App
   deactivatePowerMode: =>
     @powerMode = false
     @$body.removeClass "power-mode"
+
+  onClickDownload: =>
+    $a = $("<a>")
+      .attr
+        download: 'result_' + localStorage["name"] + '.html'
+        href: window.URL.createObjectURL(new Blob([@editor.getValue()], {type: "text/txt"}))
+      .appendTo "body"
+
+    $a[0].click()
+
+    $a.remove()
 
   onClickInstructions: =>
     $("body").toggleClass "show-instructions"

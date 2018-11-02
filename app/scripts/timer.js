@@ -36,6 +36,10 @@ form.addEventListener('submit', function (event) {
     timerDisplay.textContent = a.getMinutes() + ":00";
     timerDisplay.classList.remove('timer__display--disabled');
   }
+  else {
+      timerDisplay.textContent = "00:00";
+      timerDisplay.classList.add('timer__display--disabled');
+  }
   settingModal.classList.remove('modal--show');
 });
 
