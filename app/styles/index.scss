@@ -341,17 +341,21 @@ body.power-mode {
   bottom: 20px;
   left: 20px;
   z-index: 10;
+
   min-width: 150px;
+
   color: #fff;
 
   &__button {
     position: absolute;
     top: -4px;
     left: 69px;
+
     width: 20px;
     height: 20px;
-    padding: 0;
     margin: 0;
+    padding: 0;
+
     background: 0 0;
   }
 
@@ -369,12 +373,15 @@ body.power-mode {
 
   &__title {
     margin: 0 0 15px;
+
     font-size: 12px;
   }
 
   &__display {
     margin: 0;
+
     font-size: 30px;
+
     color: #4EFFA1;
 
     &--disabled {
@@ -388,11 +395,13 @@ body.power-mode {
   top: 50%;
   left: 50%;
   z-index: 20;
+
   display: none;
   width: 400px;
-  padding: 20px;
   margin-top: -200px;
   margin-left: -200px;
+  padding: 20px;
+
   background-color: #fff;
 
   &__title {
@@ -426,6 +435,7 @@ body.power-mode {
     &--number {
       padding: 5px;
       min-width: 60px;
+
       border: 2px solid black;
     }
   }
@@ -448,6 +458,7 @@ body.power-mode {
       width: 8px;
       height: 8px;
       padding: 2px;
+
       border: 2px solid white;
       box-shadow: 0 0 0 2px black;
     }
@@ -463,9 +474,11 @@ body.power-mode {
   position: fixed;
   top: 0;
   left: 0;
+
   display: none;
   width: 100vw;
   height: 100vh;
+
   background-color: rgba(40, 72, 55, .9);
 
   &__message {
